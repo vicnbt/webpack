@@ -51,6 +51,7 @@ var common =
 	
 	var modName = location.pathname.slice(1);
 	
+	console.log(modName);
 	var route = __webpack_require__(1)("./" + modName);
 	route();
 	
@@ -81,10 +82,10 @@ var common =
 	var map = {
 		"./about": 2,
 		"./about.js": 2,
-		"./content": 3,
-		"./content.js": 3,
-		"./home": 4,
-		"./home.js": 4
+		"./content": 4,
+		"./content.js": 4,
+		"./home": 5,
+		"./home.js": 5
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -107,11 +108,13 @@ var common =
 	"use strict";
 	
 	module.exports = function () {
-	    document.write("about");
+	
+	    document.write(" about");
 	};
 
 /***/ },
-/* 3 */
+/* 3 */,
+/* 4 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -119,13 +122,13 @@ var common =
 	module.exports = " It works from content.js";
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	module.exports = function () {
-	    var textContent = __webpack_require__(3);
+	    var textContent = __webpack_require__(4);
 	    document.write(textContent);
 	
 	    if (true) {

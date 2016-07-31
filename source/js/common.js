@@ -2,6 +2,7 @@ document.write("header");
 
 let modName = location.pathname.slice(1);
 
+console.log(modName);
 let route = require("./routes/"+modName);
 route();
 
