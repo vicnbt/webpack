@@ -82,10 +82,10 @@ var common =
 	var map = {
 		"./about": 2,
 		"./about.js": 2,
-		"./content": 4,
-		"./content.js": 4,
-		"./home": 5,
-		"./home.js": 5
+		"./content": 3,
+		"./content.js": 3,
+		"./home": 4,
+		"./home.js": 4
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -108,13 +108,13 @@ var common =
 	"use strict";
 	
 	module.exports = function () {
-	
 	    document.write(" about");
+	    debug;
+	    exports.textContent = "about";
 	};
 
 /***/ },
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -122,18 +122,21 @@ var common =
 	module.exports = " It works from content.js";
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	module.exports = function () {
-	    var textContent = __webpack_require__(4);
+	    var textContent = __webpack_require__(3);
+	
+	    console.log(textContent);
+	
 	    document.write(textContent);
 	
-	    if (true) {
-	        console.log("this is dev");
-	    }
+	    //if(NODE_ENV == "dev"){
+	    //    console.log("this is dev");
+	    //}
 	
 	    exports.textContent = textContent;
 	};
